@@ -114,6 +114,10 @@ app.all("*", (req, res, next) => {
 // ===============================
 
 app.use((err, req, res, next) => {
+    console.error("========== ERROR ==========");
+    console.error(err);
+    console.error("===========================");
+
     let {
         status = 500,
         message = "something went wrong",
